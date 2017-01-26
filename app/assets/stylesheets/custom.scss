@@ -1,3 +1,33 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+#top-nav {
+  margin: 0;
+  height: 100px;
+  background: #BCBCBC; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#BCBCBC, #000000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#BCBCBC, #000000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#BCBCBC, #000000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#BCBCBC, #000000); /* Standard syntax */
+}
+
+#logo {
+  font-weight: 700;
+  font-size: 3em;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  width: 135px;
+  height: 55px;
+  background: yellow; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(yellow, white, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(yellow, white, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(yellow, white, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(yellow, white, yellow); /* Standard syntax */
+  border-radius: 5px;
+  border: 1px solid black;
 }
