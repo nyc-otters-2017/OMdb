@@ -1,5 +1,18 @@
 class App extends React.Component {
+  constructor() {
+      super()
+      this.state = {
+        movies: []
+      }
+  }
 
+  componentDidMount() {
+    $.ajax({
+      url: "http://www.omdbapi.com/?s=mad+max&y=&r=json&plot=short"
+    }).done(function(response) {
+      console.log(response)
+    }bind(this)).
+  }
   render() {
     return (
       <div className="container-flex">
