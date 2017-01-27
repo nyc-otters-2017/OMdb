@@ -19,7 +19,9 @@ class App extends React.Component {
         <Top />
         <div className="rows main-body">
           <div className="col-sm-6 col-md-6">
-            <Result />
+            <Result 
+              movies={this.state.movies}
+            />
           </div>
         </div>
         <footer>
