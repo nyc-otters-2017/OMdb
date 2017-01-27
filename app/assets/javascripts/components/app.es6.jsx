@@ -10,7 +10,8 @@ class App extends React.Component {
     $.ajax({
       url: "http://www.omdbapi.com/?s=mad+max&y=&r=json&plot=short"
     }).done(function(response) {
-      this.setState({ movies: response})
+      this.setState({ movies: response.Search})
+      debugger
     }.bind(this))
   }
   render() {
@@ -19,7 +20,7 @@ class App extends React.Component {
         <Top />
         <div className="rows main-body">
           <div className="col-sm-6 col-md-6">
-            <Result 
+            <Result
               movies={this.state.movies}
             />
           </div>
