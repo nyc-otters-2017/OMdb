@@ -1,6 +1,5 @@
 class Movie extends React.Component {
   render() {
-    // debugger
     let { Title, Year, Poster} = this.props.data
     return (
       <article className="movie">

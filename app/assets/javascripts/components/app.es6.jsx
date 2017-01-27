@@ -11,7 +11,6 @@ class App extends React.Component {
       url: "http://www.omdbapi.com/?s=mad+max&y=&r=json&plot=short"
     }).done(function(response) {
       this.setState({ movies: response.Search})
-      debugger
     }.bind(this))
   }
   render() {
