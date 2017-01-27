@@ -10,8 +10,8 @@ class App extends React.Component {
     $.ajax({
       url: "http://www.omdbapi.com/?s=mad+max&y=&r=json&plot=short"
     }).done(function(response) {
-      console.log(response)
-    }bind(this)).
+      this.setState({ movies: response})
+    }.bind(this))
   }
   render() {
     return (
