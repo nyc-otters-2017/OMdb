@@ -2,8 +2,10 @@ class App extends React.Component {
   constructor() {
       super()
       this.state = {
-        movies: []
+        movies: [],
+        movie: []
       }
+      this.postMovie = this.postMovie.bind(this)
   }
 
   componentDidMount() {
@@ -13,10 +15,23 @@ class App extends React.Component {
       this.setState({ movies: response.Search})
     }.bind(this))
   }
+
+  postMovie(movieContent) {
+      var url = "http://www.omdbapi.com/?t=" + movieContent + "&y=&plot=short&r=json"
+      $.ajax({
+        url: url,
+      }).success((response) => {
+        this.setState({ movie: response })
+        console.log(this.state.movie)
+      })
+  }
+
   render() {
     return (
       <div className="container-flex">
-        <Top />
+        <Top
+          onPostMovie={this.postMovie}
+        />
         <div className="rows main-body">
           <div className="col-sm-6 col-md-6">
             <Result
